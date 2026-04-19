@@ -254,7 +254,7 @@ if st.session_state.user_role is None:
                     YUIXX SHOP
                 </h1>
                 <p style="color: white; text-shadow: 1px 1px 5px rgba(0,0,0,0.9); font-size: 1.2rem; margin-top: 10px;">
-                    
+                    ʕ·͡ᴥ·ʔ
                 </p>
             </div>
             <div></div>
