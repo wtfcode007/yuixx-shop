@@ -6,4 +6,4 @@ google-auth-oauthlib
 google-auth-httplib2
 pandas
 requests
-streamlit-gsheets-connection
+st-gsheets-connection
