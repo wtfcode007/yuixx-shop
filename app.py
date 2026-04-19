@@ -228,7 +228,7 @@ def show_customer_tracking_page(df_active, df_history):
 # ==========================================
 # 🔐 4. Security & Role Assignment
 # ==========================================
-SECRET_PASSWORD = "mo190849"
+SECRET_PASSWORD = st.secrets["ADMIN_PASSWORD"] 
 
 if "user_role" not in st.session_state:
     st.session_state.user_role = None
