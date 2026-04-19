@@ -251,10 +251,10 @@ if st.session_state.user_role is None:
             justify-content: space-between;
         ">
             <div><h1 style="color: white; text-shadow: 2px 2px 8px rgba(0,0,0,0.9); margin: 10px; font-size: 3.5rem;">
-                    yuixx Shop
+                    YUIXX SHOP
                 </h1>
                 <p style="color: white; text-shadow: 1px 1px 5px rgba(0,0,0,0.9); font-size: 1.2rem; margin-top: 10px;">
-                    กรุณาเลือกรูปแบบการเข้าใช้งาน
+                    
                 </p>
             </div>
             <div></div>
@@ -271,10 +271,10 @@ if st.session_state.user_role is None:
             
     with col_admin:
         st.subheader("🔐 สำหรับเจ้าของร้าน")
-        st.caption("ระบบจัดการคิว, ยอดเงิน และเปิดบิล")
+        st.caption("")
         with st.form("login_form"):
-            pwd_input = st.text_input("รหัสผ่านหลังบ้าน", type="password")
-            submit_login = st.form_submit_button("เข้าสู่ระบบหลังบ้าน", use_container_width=True)
+            pwd_input = st.text_input("รหัสผ่าน", type="password")
+            submit_login = st.form_submit_button("เข้าสู่ระบบ", use_container_width=True)
             if submit_login:
                 if pwd_input == SECRET_PASSWORD:
                     st.session_state.user_role = "admin"
@@ -455,7 +455,7 @@ elif st.session_state.user_role == "admin":
                             update_customer_db(customer_name, contact_info)
                             save_all_sheets(df_active, df_history, df_customers)
                             
-                            st.image("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3N5Y3lyZndxdzF0M3R5cTRwdWw4ZGp5ZHp4OHB5ZzM1cDdudzZpdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/X8y6X9N33379D51A8N/giphy.gif", width=50)
+                            st.image("https://media.tenor.com/Pky9cxOgWEwAAAAj/chikawa.gif", width=80)
                             st.success(f"✅ บันทึกออเดอร์ของคุณ {customer_name} เรียบร้อยแล้ว!")
                 else:
                     st.error("⚠️ กรุณากรอกข้อมูลให้ครบถ้วน")
@@ -464,7 +464,7 @@ elif st.session_state.user_role == "admin":
     elif menu == "จัดการคิว & ส่งของ":
         st.markdown("""<div style="display: flex; align-items: center; margin-bottom: 20px;"><img src="https://i.pinimg.com/originals/7b/83/7d/7b837d4c0afbba735dd6373a7772645f.gif" width="150" style="margin-right: 15px;"><h1 style="margin: 0;">จัดการคิวปัจจุบัน (Active Orders)</h1></div>""", unsafe_allow_html=True)
         if df_active.empty:
-            st.warning("ไม่มีคิวงานที่กำลังดำเนินการอยู่ในระบบครับ")
+            st.warning("ไม่มีคิวงานที่กำลังดำเนินการอยู่ในระบบ")
         else:
             df_active['price_num'] = pd.to_numeric(df_active['price'], errors='coerce')
             df_active['deposit_num'] = pd.to_numeric(df_active['deposit'], errors='coerce')
