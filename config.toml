@@ -1,0 +1,38 @@
+[theme]
+primaryColor = "#B983FF"             # สีม่วงสว่าง (พาสเทลนีออนนิดๆ ให้ปุ่มและกราฟเด่นขึ้นมา)
+backgroundColor = "#110C1B"          # สีดำอมม่วงเข้มจัด (Deep Dark Violet - ลึกลับ หรูหรา สบายตา)
+secondaryBackgroundColor = "#1E1731" # สีม่วงเข้ม (สำหรับพื้นหลัง Sidebar หรือกล่องกรอบต่างๆ ให้ดูมีมิติ)
+textColor = "#EAE3F7"                # สีขาวอมม่วงอ่อนๆ (อ่านง่าย ตัดกับพื้นหลังกำลังดี ไม่แสบตา)
+font = "sans serif"
+st.markdown("""
+<style>
+    /* เปลี่ยนสีพื้นหลังเป็นสีครีมสว่างๆ และตัวอักษรสีเทาเข้ม */
+    .stApp {
+        background-color: #FAFAFA;
+        color: #333333;
+        font-family: 'Helvetica Neue', sans-serif;
+    }
+    
+    /* ตกแต่งกล่อง Metric ให้ดูแพง มีเงาบางๆ */
+    div[data-testid="metric-container"] {
+        background-color: #FFFFFF;
+        border: 1px solid #EAEAEA;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.03);
+    }
+
+    /* ตกแต่งปุ่มให้ดูเรียบหรู */
+    .stButton>button {
+        background-color: #333333;
+        color: #D4AF37; /* สีทอง */
+        border: none;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+    .stButton>button:hover {
+        background-color: #D4AF37;
+        color: #FFFFFF;
+    }
+</style>
+""", unsafe_allow_html=True)
